@@ -1,0 +1,29 @@
+// this is a git commond
+git add  <filename | *>   //添加一个文件准备提交仓库暂存区 *表示添加所有的文件     
+git commit -m "提交信息"   //将暂存区的文件全部提交到仓库，-m 
+git  status  //查看当前的仓库的信息
+git diff  <filename>   //显示当前文件与仓库中的文件的区别，
+git log // 查看当前仓库过去的提交历史
+git reflog //查看命令历史
+git reset --hard commit_id // 回到之前的某个版本
+git checkout -- filename  //取消修改，回到最近一次的,git commit OR git add 的状态
+git remote add origin  <URL> //关联一个远程仓库
+git push -u origin master  //将本地的master分支与 远程仓库的master进行相关联
+git clone //克隆仓库
+git branch  //查看所有的分支
+git branch  branchName //创建一个分支
+git checkout branchName //切换到指定的分支
+git merge branchName   //将指定的分支，合并到当前的分支
+git branch -d branchName  /删除指定的分支
+git stash //将当前的工作区，保存起来
+git stash apply //恢复保存的工作区
+git stash drop //删除保存的工作区
+git stash pop //弹出一个保存的工作区
+git cherry-pick <commitId> //将一个commit提交 复制到当前的分支
+git checkout -b branch-name origin/branch-name //在本地创建和远程对应的分支
+git branch --set-upstream branch-name origin/branch-name //建立本地分支和远程分支的关联
+git tag  <tagName> //给一个提交打标签
+git push origin <tagName> //推送一个本地的标签
+git push origin --tags //推送全部的本地标签
+git tag -d <tagName> //删除一个本地的标签
+git push origin :refs/tags/<tagName>  //删除一个远程标签
